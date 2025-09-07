@@ -51,12 +51,12 @@ const LandingPage = () => {
         <div className="flex items-center space-x-2">
           <Shield className="h-8 w-8 text-blue-600" />
           <span className="text-2xl font-bold text-slate-900 dark:text-white">
-            BiometricAuth
+            AFUSTABiometricAuth
           </span>
         </div>
         <Button
           variant="outline"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/auth")}
           className="hover:bg-blue-50 hover:border-blue-300"
         >
           Sign In

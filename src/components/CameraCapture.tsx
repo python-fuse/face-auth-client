@@ -26,6 +26,14 @@ const CameraCapture: React.FC<CameraCaptureProps> = ({
     };
   }, []);
 
+  // Clean up when capturing state changes (e.g., after successful login)
+  useEffect(() => {
+    if (isCapturing && capturedImage) {
+      // If we're in capturing state and have a captured image, ensure camera is stopped
+      stopCamera();
+    }
+  }, [isCapturing, capturedImage]);
+
   const startCamera = async () => {
     try {
       const mediaStream = await navigator.mediaDevices.getUserMedia({
@@ -80,6 +88,8 @@ const CameraCapture: React.FC<CameraCaptureProps> = ({
         if (blob) {
           const dataUrl = canvas.toDataURL("image/png");
           setCapturedImage(dataUrl);
+          // Stop the camera after capturing
+          stopCamera();
           onCapture(blob, dataUrl);
         }
       },
