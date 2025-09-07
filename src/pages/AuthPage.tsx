@@ -117,7 +117,7 @@ const AuthPage = () => {
         <div className="flex items-center space-x-2">
           <Shield className="h-8 w-8 text-blue-600" />
           <span className="text-2xl font-bold text-slate-900 dark:text-white">
-            AFUSTABiometricAuth
+            AFUSTA BiometricAuth
           </span>
         </div>
         <Button

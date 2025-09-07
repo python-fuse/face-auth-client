@@ -23,19 +23,21 @@ const LandingPage = () => {
   const features = [
     {
       icon: Shield,
-      title: "Secure Authentication",
+      title: "Examination Security",
       description:
-        "Advanced biometric security using facial recognition technology",
+        "Prevent impersonation during exams with advanced facial recognition verification",
     },
     {
       icon: Scan,
-      title: "Fast Recognition",
-      description: "Lightning-fast face detection and verification in seconds",
+      title: "Student Verification",
+      description:
+        "Instant student identity confirmation using biometric technology",
     },
     {
       icon: Lock,
-      title: "Privacy Protected",
-      description: "Your biometric data is encrypted and stored securely",
+      title: "Academic Integrity",
+      description:
+        "Maintain the highest standards of academic honesty and security",
     },
   ];
 
@@ -51,7 +53,7 @@ const LandingPage = () => {
         <div className="flex items-center space-x-2">
           <Shield className="h-8 w-8 text-blue-600" />
           <span className="text-2xl font-bold text-slate-900 dark:text-white">
-            AFUSTABiometricAuth
+            AFUSTA BiometricAuth
           </span>
         </div>
         <Button
@@ -75,19 +77,23 @@ const LandingPage = () => {
             className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6"
             variants={fadeInUp}
           >
-            Secure Access with
+            <span className="text-3xl md:text-4xl block mb-4 text-blue-600 font-medium">
+              Abdullahi Fodio University of Science & Technology
+            </span>
+            Secure Student Verification with
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 block">
-              Face Recognition
+              Biometric Authentication
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto"
+            className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Experience the future of authentication with our advanced biometric
-            face recognition system. Secure, fast, and privacy-focused access
-            control.
+            Advanced biometric face recognition system designed specifically for
+            AFUSTA's security examinations and student verification processes.
+            Ensuring academic integrity through cutting-edge facial recognition
+            technology.
           </motion.p>
 
           <motion.div variants={fadeInUp}>
@@ -96,7 +102,7 @@ const LandingPage = () => {
               onClick={() => navigate("/auth")}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-shadow"
             >
-              Get Started
+              Student Registration & Login
             </Button>
           </motion.div>
         </motion.div>
@@ -141,18 +147,18 @@ const LandingPage = () => {
               <Scan className="h-24 w-24 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Ready to Experience Biometric Authentication?
+              Ready to Secure Your Academic Journey?
             </h3>
             <p className="text-slate-600 dark:text-slate-300 mb-8">
-              Join thousands of users who trust our secure face recognition
-              technology
+              Join AFUSTA students in experiencing the most secure and reliable
+              examination and verification system
             </p>
             <Button
               size="lg"
               onClick={() => navigate("/auth")}
               className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white"
             >
-              Start Authentication
+              Start Student Verification
             </Button>
           </div>
         </motion.div>
@@ -168,10 +174,13 @@ const LandingPage = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="flex justify-center items-center space-x-2 mb-4">
             <Shield className="h-6 w-6 text-blue-400" />
-            <span className="text-xl font-semibold">BiometricAuth</span>
+            <span className="text-xl font-semibold">AFUSTA BiometricAuth</span>
           </div>
           <p className="text-slate-400">
-            Secure • Fast • Privacy-Focused • Biometric Authentication
+            Abdullahi Fodio University of Science & Technology
+          </p>
+          <p className="text-slate-500 text-sm mt-2">
+            Secure • Reliable • Academic Integrity • Student Verification
           </p>
         </div>
       </motion.footer>
